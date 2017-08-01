@@ -1,0 +1,352 @@
+<script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<head>
+
+<!--
+TUMBLR THEME BY TINA HAIBODI
+-->
+
+<meta name="color:text" content="#2e2e2e"/>
+<meta name="color:link" content="#2e2e2e"/>
+<meta name="color:scrollbar" content="#2e2e2e" />
+
+<meta name="image:sidebar" content=""/>
+<meta name="if:400px posts" content=""/>
+
+<meta name="text:Link 1" content="">
+<meta name="text:Link 1 Title" content="">
+<meta name="text:Link 2" content="">
+<meta name="text:Link 2 Title" content="">
+<meta name="text:Link 3" content="">
+<meta name="text:Link 3 Title" content="">
+
+<head><title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+<style type="text/css">
+
+::-webkit-scrollbar {width: 3px; height:auto; background:{color:background}}
+::-webkit-scrollbar-corner {padding:2px;background:{color:background}}
+::-webkit-scrollbar-button:vertical {height:5px; display: block; background:{color:scrollbar}}
+::-webkit-scrollbar-button:horizontal {width: 3px; height: 5px; display: block; background:{color:scrollbar}}
+::-webkit-scrollbar-thumb:vertical {background:{color:scrollbar};}
+::-webkit-scrollbar-thumb:horizontal {background: {color:background};}
+::-webkit-scrollbar-thumb {background: {color:scrollbar};}
+
+body {
+background:#ffffff;
+font-family:arial;
+font-size:11px;
+letter-spacing:0px;
+line-height:90%;
+color:{color:text};
+}
+
+a:link, a:active, a:visited{color: {color:link};}
+a:hover{color:{color:link}; text-decoration:underline;}
+
+a {
+color:{color:link};
+text-decoration:none;
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+
+a:hover {
+color:{color:link};
+text-decoration:underline;
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+
+#container {
+background-color:{color:background};
+width:700px;
+margin: 0 auto -12px auto;
+text-align: center;
+}
+
+.links{
+padding:5px;
+margin-top:3px;
+word-spacing:0px;
+text-align:center;
+}
+
+.links a{
+padding:5px;
+letter-spacing:0px;
+color:{color:link};
+text-decoration:none;
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+
+.links a:hover{
+color:{color:link};
+text-decoration:underline;
+-moz-transition-duration:0.4s;
+-webkit-transition-duration:0.4s;
+-o-transition-duration:0.4s;
+}
+
+#sidebar {
+margin-left:500px;
+top: 150px;
+position:fixed;
+width:260px;
+}
+
+#descri {
+width:260px;
+padding:15px;
+}
+
+#descri img {
+width:260px;
+margin-bottom:5px;
+}
+
+#stext {
+margin-top:2px;
+margin-bottom:5px;
+padding:5px;
+text-align:center;
+}
+
+.pagi {
+font-size:15px;
+margin-top:-30px;
+font-style:italic;
+margin-bottom:60px;
+padding:10px;
+margin-left:200px;
+}
+
+h1 {
+font-size:15px;
+text-align:center;
+padding:10px;
+color:{color:text};
+}
+
+h2 {
+font-size:15px;
+text-align:justify;
+font-weight:normal;
+padding:10px;
+}
+
+#asker {
+float:left;
+padding:1px;
+margin-top:-2px;
+margin-right:5px;
+}
+
+#question {
+line-height:90%;
+}
+
+#answer {
+line-height:90%;
+}
+
+blockquote {
+border-left:1px solid #e9e7e7;
+padding-left:10px;
+margin:5px;
+}
+
+#stuffcontainer {
+float:left;
+text-align:left;
+background-color:{color:bg};
+color:{color:text};
+margin-bottom: 0px;
+{block:ifNot400pxposts}
+width:400px;
+{/block:ifNot400pxposts}
+{block:if400pxposts}
+width:400px;
+{/block:if400pxposts}
+}
+
+#stuff {
+{block:ifNot400pxposts}
+width:400px;
+margin-left:50px;
+{/block:ifNot400pxposts}
+{block:if400pxposts}
+width:400px;
+margin-left:50px;
+{/block:if400pxposts}
+margin-top:50px;
+text-align:justify;
+margin-bottom:60px;
+padding:10px;
+line-height:90%;
+letter-spacing:0px;
+background-color:#ffffff;
+color:{color:text};
+}
+
+#postinfo {
+margin-top:0px;
+{block:ifNot400pxposts}
+width:400px;
+{/block:ifNot400pxposts}
+{block:if400pxposts}
+width:400px;
+{/block:if400pxposts}
+padding-top:10px;
+line-height:90%;
+text-align:right;
+}
+
+.tags {
+{block:ifNot400pxposts}
+width:400px;
+{/block:ifNot400pxposts}
+{block:if400pxposts}
+width:400px;
+{/block:if400pxposts}
+text-align:right;
+margin-top:2px;
+line-height:90%;
+}
+
+ol.notes {
+width:400px;
+margin-left:50px;
+padding:0px;
+margin:0px 0px 0px 50px;
+list-style-type:none;
+text-align:left;
+}
+ol.notes li.note {
+padding: 10px;
+}
+ol.notes li.note img.avatar {
+vertical-align:-4px;
+margin-right:10px;
+width:16px;
+height:16px;
+-webkit-border-radius:100px;
+-moz-border-radius:100px;
+border-radius:100px;
+}
+ol.notes li.note span.action {
+font-weight:normal;
+}
+ol.notes li.note .answer_content {
+font-weight:normal;
+}
+ol.notes li.note blockquote {
+padding:9px 6px 9px 6px;
+}
+
+#cred {
+bottom:30px;
+font-style:none;
+right:35px;
+position:fixed;
+}
+
+</style>
+<style type="text/css">{CustomCSS}</style>
+
+</head>
+<body>
+
+<div id="cred"><a href="http://regansthemes.tumblr.com/">♡</a></div>
+
+<div id="container">
+
+<div id="sidebar">
+<div id="descri">
+
+<div id="sidebarimage"><img src="{image:sidebar}"></div>
+
+<div id="stext">
+{Description}
+</div>
+
+<select onChange="location.href=this.options[this.selectedIndex].value;" style="width: 150px; font-family:arial; font-size:11px;">
+<option value="/">navigation</option>
+<option value="/">home</option>
+<option value="/ask">ask</option>
+<option value="{text:Link 1}">{text:Link 1 Title}</option>
+<option value="{text:Link 2}">{text:Link 2 Title}</option>
+<option value="{text:Link 3}">{text:Link 3 Title}</option>
+</select>
+
+</div></div>
+
+<div id="stuffcontainer">
+
+{block:Posts}<div id="stuff">
+
+<br><br>
+
+{block:Text}{block:Title}<h1>{Title}</h1>{/block:Title}{Body}{/block:Text}
+
+{block:Photo}{block:ifNot400pxposts}<center><img src="{PhotoURL-400}"/></center>{/block:ifNot400pxposts}{block:if400pxposts}<center><img src="{PhotoURL-400}"/></center>{/block:if400pxposts}{block:Caption}{Caption}{/block:Caption}{/block:Photo}
+
+{block:Quote}<h2>“{Quote}” <br><br><center><b>— {Source}</b></center></h2>{/block:Quote}
+
+{block:Link}<a href="{URL}"><h1>{Name}</h1></a>
+{block:Description}<p>{Description}</p>{/block:Description}{/block:Link}
+
+{block:Photoset}{block:ifNot400pxposts}<center>{Photoset-400}</center>{/block:ifNot400pxposts}{block:if400pxposts}<center>{Photoset-400}</center>{/block:if400pxposts}{block:Caption}{Caption}{/block:Caption}{/block:Photoset}
+
+{block:Chat}<ul class="chat">{block:Lines}<li class="user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label}&nbsp;{Line}</li>{/block:Lines}</ul>{/block:Chat}
+
+{block:Video} {block:ifNot400pxposts}{Video-400}{/block:ifNot400pxposts}{block:if400pxposts}{Video-400}{/block:if400pxposts}{block:Caption}{Caption}{/block:Caption}{/block:Video}
+
+{block:Answer}<div id="asker"></div><big><B>{Asker}</B></big><br><div id="question">{Question}</div><br><div id="answer">{Answer}</div>{/block:Answer}
+
+{block:Audio}<div class="audio"><div class="audioinfo">{block:TrackName}<b>Title:</b> {TrackName}<br />{/block:TrackName}{block:Artist}<b>Artist:</b> {Artist}<br />{/block:Artist}{/block:ExternalAudio}<b>Played:</b> {PlayCount} times</div><br><div class="playercontainer">{AudioPlayerWhite}</div></div>{block:Caption}{Caption}{/block:Caption}<br>{/block:Audio}
+
+{block:Date}<div id="postinfo"><div id="date"><a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonthWithZero}/{ShortYear}</a>{block:NoteCount}&nbsp;&nbsp;<a href="{Permalink}">(+{NoteCount})</a>{/block:NoteCount}&nbsp;&nbsp;{block:RebloggedFrom}<a href="{ReblogParentURL}"
+title="{ReblogParentTitle}">via</a> /
+<a href="{ReblogRootURL}"title="{ReblogRoottitle}">src</a>{/block:RebloggedFrom}
+
+</div></div>
+{/block:Date}
+
+{block:HasTags}
+<div class="tags">
+{block:Tags}<a href="{TagURL}">#{Tag}</a>&nbsp;{/block:Tags}</div>
+{/block:HasTags}
+
+</div>
+
+{block:PostNotes}{PostNotes}{/block:PostNotes}
+
+{/block:Posts}
+
+{block:ContentSource}
+<!— {SourceURL}{block:SourceLogo}<img src=”{BlackLogoURL}”width=”{LogoWidth}” height=”{LogoHeight}” alt=”{SourceTitle}” />{/block:SourceLogo}{block:NoSourceLogo}{SourceLink}{/block:NoSourceLogo} —>{/block:ContentSource}{block:ReblogParent}{/block:ReblogParent}
+
+{block:Pagination}
+<div class="pagi">
+{block:PreviousPage}
+<a href="{PreviousPage}">prev</a>
+{/block:PreviousPage}
+―
+{block:NextPage}
+<a href="{NextPage}">next</a>
+{/block:NextPage}
+</div>
+{/block:Pagination}
+
+</div>
+
+</body>
+</html>
